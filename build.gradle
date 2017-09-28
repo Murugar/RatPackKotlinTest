@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+plugins {
+    id 'nebula.kotlin' version '1.0.6'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.4'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'me.drmaas:ratpack-kotlin-dsl:0.4.1-rc.6'
+}
+
+mainClassName = "com.iqmsoft.ratpack.kotlin.ApplicationKt"
+
+shadowJar {
+    classifier = null
+}
